@@ -1,0 +1,103 @@
+.fn-item {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+
+    & .btn--clear,
+    & .count-item {
+        transition: color 0.4s;
+        color: $color-very-dark-grayish-blue;
+    }
+
+    @media screen and (max-width: 800px) {
+        font-size: 12px;
+    }
+}
+
+.btn--sort-container {
+    display: flex;
+    transition: background-color 0.9s;
+    color: $color-dark-grayish-blue;
+
+    @media screen and (max-width: 800px) {
+        padding: 1rem 2rem;
+        margin-top: 2rem;
+        font-size: 14px;
+        font-weight: 700;
+        justify-content: center;
+        border-radius: 8px;
+        background-color: $color-very-dark-desaturated-blue;
+
+        -webkit-box-shadow: 0px 31px 59px -10px rgba(0, 0, 0, 0.37);
+        -moz-box-shadow: 0px 31px 59px -10px rgba(0, 0, 0, 0.37);
+        box-shadow: 0px 31px 59px -10px rgba(0, 0, 0, 0.37);
+    }
+
+    & > * {
+        transition: color 0.4s;
+        margin: 0 1rem;
+    }
+
+    & > *:hover {
+        color: $color-very-light-gray;
+        cursor: pointer;
+    }
+}
+
+.btn--clear {
+    transition: color 0.4s;
+    &:hover {
+        color: $color-very-light-gray;
+        cursor: pointer;
+    }
+
+    &:active {
+        color: $color-primary-bright-blue;
+    }
+}
+
+.drag-description {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    color: $color-dark-grayish-blue;
+}
+
+.hidden {
+    display: none;
+}
+
+.white {
+    color: $color-very-dark-desaturated-blue !important;
+    background-color: $color-very-light-gray !important;
+
+    @media screen and (max-width: 800) {
+        font-size: 14px;
+    }
+
+    & .fn-item {
+        color: $color-dark-grayish-blue;
+    }
+
+    & .btn--sort {
+        color: $color-dark-grayish-blue;
+    }
+
+    & .btn--clear,
+    & .count-item {
+        color: $color-light-grayish-blue;
+    }
+
+    & .btn--clear:hover,
+    & .count-item:hover,
+    & .btn--sort:hover {
+        color: $color-very-dark-grayish-blue;
+    }
+}
+
+.active {
+    color: $color-primary-bright-blue !important;
+}

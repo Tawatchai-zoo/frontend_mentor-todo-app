@@ -1,0 +1,119 @@
+// primary color
+$color-primary-bright-blue: hsl(220, 98%, 61%); // Bright Blue
+$color-primary-background-blue: hsl(192, 100%, 67%);
+$color-primary-background-purple: hsl(280, 87%, 65%);
+
+// Light theme color
+$color-very-light-gray: hsl(0, 0%, 98%);
+$color-very-light-grayish-blue: hsl(236, 33%, 92%);
+$color-light-grayish-blue: hsl(233, 11%, 84%);
+$color-dark-grayish-blue: hsl(236, 9%, 61%);
+$color-very-dark-grayish-blue: hsl(235, 19%, 35%);
+
+// Dark theme color
+$color-very-dark-blue: hsl(235, 21%, 11%);
+$color-very-dark-desaturated-blue: hsl(235, 24%, 19%);
+$color-light-grayish-blue: hsl(234, 39%, 85%);
+$color-light-grayish-blue-hover: hsl(236, 33%, 92%);
+$color-dark-grayish-blue: hsl(234, 11%, 52%);
+$color-very-dark-grayish-blue: hsl(233, 14%, 35%);
+$color-very-dark-grayish-blue-hover: hsl(237, 14%, 26%);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+
+    background-image: url('../images/bg-desktop-dark.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    background-color: $color-very-dark-blue;
+    transition: all 0.4s;
+
+    @media only screen and (max-width: 1000px) {
+        // background-size: auto;
+        background-image: url('../images/bg-mobile-dark.jpg');
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 100%;
+        background-color: $color-very-dark-blue;
+        transition: all 0.4s;
+    }
+}
+
+.container {
+    margin: auto;
+    padding: 5rem 2rem;
+    max-width: 50rem;
+    // background-color: rgba(255, 255, 255, 0.233);
+    color: $color-light-grayish-blue;
+    font-weight: 400;
+    font-size: 1.3rem;
+
+    @media only screen and (max-width: 800px) {
+        font-size: 1rem;
+    }
+
+    @media only screen and (max-width: 500px) {
+        font-size: 14px;
+    }
+
+    & > * {
+        width: 100%;
+        display: flex;
+    }
+}
+
+.attribution {
+    margin: 5rem auto;
+    text-align: center;
+    color: $color-primary-bright-blue;
+
+    & a {
+        text-decoration: none;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-image: linear-gradient(
+            to right,
+            #f00,
+            orangered,
+            #ff0,
+            #fff
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        animation: colorSlide 7s linear infinite;
+        background-size: 1000%;
+        color: transparent;
+        font-weight: 700;
+    }
+}
+
+@keyframes colorSlide {
+    0% {
+        background-position: 0% 100%;
+    }
+
+    50% {
+        background-position: 100% 0%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+}
